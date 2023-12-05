@@ -26,6 +26,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.project7_classc.model.DetailSiswa
 import com.example.project7_classc.model.PenyediaViewModel
 import com.example.project7_classc.model.UIStateSiswa
+import com.example.project7_classc.navigasi.SiswaTopAppBar
+
 import kotlinx.coroutines.launch
 
 object DestinasiEntry: DestinasiNavigasi{
@@ -47,7 +49,7 @@ fun EntrySiswaScreen(
         topBar = {
             SiswaTopAppBar(
                 title = stringResource(DestinasiEntry.titleRes),
-                canNavigateBack = true,
+                canNavigasiBack = true,
                 scrollBehavior = scrollBehavior
             )
         }
@@ -82,7 +84,7 @@ fun EntrySiswaBody(
     ) {
         FormInputSiswa(
             detailSiswa = uiStateSiswa.detailSiswa,
-            onSiswaValueChange = onSiswaValueChange,
+            onValueChange = onSiswaValueChange,
             modifier = Modifier.fillMaxWidth()
         )
         Button(
